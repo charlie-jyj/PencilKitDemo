@@ -75,7 +75,6 @@ class DataModelController {
             traitCollection.performAsCurrent {
                 let image = signature.image(from: thumbnailRect, scale: thumbnailScale)
                 
-                // image base64 변환하기
                 if let data = image.pngData() {
                     let base64 = data.base64EncodedString()
                     self.dataModel.base64s[index] = base64
